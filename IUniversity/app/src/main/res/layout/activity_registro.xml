@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="30dp"
+            android:text="Registro"
+            android:textSize="50dp"
+            android:fontFamily="serif"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginLeft="100dp"
+            />
+
+        <EditText
+            android:id="@+id/nombre"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:hint="Nombre"/>
+
+        <EditText
+            android:id="@+id/correo"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            android:hint="Correo"/>
+
+        <EditText
+            android:id="@+id/usuario"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="290dp"
+            android:layout_height="60dp"
+            android:hint="Usuario"/>
+        <EditText
+            android:id="@+id/contrasena"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="40dp"
+            android:layout_width="290dp"
+            android:layout_height="60dp"
+            android:hint="Contraseña"/>
+
+        <Button
+            android:id="@+id/registrate"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="110dp"
+            android:text="REGISTRARSE"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

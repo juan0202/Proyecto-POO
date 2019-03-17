@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calculo">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="300dp"
+                android:layout_height="140dp"
+                android:textSize="50dp"
+                android:text="Cálculo Rápido"
+                android:fontFamily="serif"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="80dp"/>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/nota1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:hint="Nota1"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/por1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:hint="Porcentaje"
+                    android:textSize="20dp"/>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/nota2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:hint="Nota2"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/por2"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:hint="Porcentaje"
+                    android:textSize="20dp"/>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/nota3"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:hint="Nota3"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/por3"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:hint="Porcentaje"
+                    android:textSize="20dp"/>
+
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/nota4"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:hint="Nota4"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/por4"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:hint="Porcentaje"
+                    android:textSize="20dp"/>
+
+
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/nota5"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:hint="Nota4"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/por5"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:hint="Porcentaje"
+                    android:textSize="20dp"/>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/nota6"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:hint="Nota4"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/por6"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="150dp"
+                    android:layout_height="60dp"
+                    android:hint="Porcentaje"
+                    android:textSize="20dp"/>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+    <LinearLayout
+
+        android:layout_marginTop="490dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/calcular"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginLeft="120dp"
+                android:text="CALCULAR"/>
+
+        </LinearLayout>
+
+        <TextView
+
+            android:id="@+id/respuesta"
+            android:layout_width="420dp"
+            android:layout_height="260dp"
+            android:layout_marginTop="-260dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="25dp" />
+
+
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

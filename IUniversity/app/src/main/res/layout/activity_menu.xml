@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_marginTop="70dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+          >
+
+            <Button
+                android:id="@+id/asignaturas"
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/boton1"/>
+            <Button
+                android:id="@+id/profesores"
+
+
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/boton4"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/calculo"
+
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/boton6"/>
+            <Button
+                android:id="@+id/agenda"
+                android:layout_marginLeft="30dp"
+
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/boton5"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/social"
+
+                android:layout_width="170dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/boton3"/>
+
+
+
+        </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
