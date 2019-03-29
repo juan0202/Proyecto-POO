@@ -20,8 +20,7 @@ public class Registro extends AppCompatActivity {
     EditText txtNom,txtCorreo,txtPass,txtUsu;
 
     SQLite_OpenHelper helper = new SQLite_OpenHelper(this, "BD1",null, 1);
-    // conexion a la bd
-    SQliteConnectionHelper conn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,23 +36,17 @@ public class Registro extends AppCompatActivity {
         registrate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               /* helper.abrir();
+
+
                 helper.insertarReg(String.valueOf(txtNom.getText()),
                         String.valueOf(txtCorreo.getText()),
                         String.valueOf(txtPass.getText()),
                         String.valueOf(txtUsu.getText()));
-                helper.cerrar();*/
-                //Toast.makeText(getApplicationContext(), "Registro almacenado con exito",Toast.LENGTH_LONG).show();
-               // PasarMain();
+                helper.cerrar();
+                Toast.makeText(getApplicationContext(), "Registro almacenado con exito",Toast.LENGTH_LONG).show();
 
-                if(txtUsu.length()>0 && txtCorreo.length()>0 && txtPass.length()>0){
+               PasarMain();
 
-                    addDataToDataBase();
-                } else {
-
-                    Toast.makeText(getApplicationContext(), "Error, por favor llene todos los campos solicitados", Toast.LENGTH_SHORT).show();
-
-                }
 
 
             }
@@ -66,40 +59,7 @@ public class Registro extends AppCompatActivity {
         startActivity(intent);
     }
 
-    // insert a la bd creada en el utilities
-    private void addDataToDataBase (){
-        // Guardamos la informacion ingresada por el usuario
 
-            String ident = txtUsu.getText().toString();
-            String nombre = txtPass.getText().toString();
-            String apellido = txtCorreo.getText().toString();
-
-            // Crea conexion con la base de datos
-            conn=new SQliteConnectionHelper(getApplicationContext(),"DBClientes",null,1);
-            SQLiteDatabase db=conn.getWritableDatabase();
-
-            // Se agregan los datos a la base de datos local
-            String insert = "INSERT INTO " + Utilidades.CLIENT_TABLE
-                    + " ("
-                    + Utilidades.ID_FIELD + "," + Utilidades.NAME_FIELD + "," + Utilidades.LASTNAME_FIELD + ")" +
-                    " VALUES (" + ident + ",'" + nombre + "','" + apellido + "')";
-
-            db.execSQL(insert);
-
-            db.close();
-            Toast.makeText(this, "Usuario añadido exitosamente a la bd local", Toast.LENGTH_SHORT).show();
-            txtUsu.setText("");
-            txtCorreo.setText("");
-            txtPass.setText("");
-
-
-
-
-
-
-
-
-    }
 
 
 }

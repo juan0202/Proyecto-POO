@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/solutions"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Desarrolladores"></activity>
+        <activity android:name=".BDNotas.VerNota"></activity>
+        <activity android:name=".Desarrolladores" />
         <activity android:name=".Calculo" />
         <activity android:name=".Agenda" />
         <activity android:name=".Asignaturas" />

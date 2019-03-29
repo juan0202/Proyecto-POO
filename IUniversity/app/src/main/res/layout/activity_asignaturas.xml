@@ -6,4 +6,180 @@
     android:layout_height="match_parent"
     tools:context=".Asignaturas">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="82dp">
+
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:hint="Materia" />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:hint="Profesor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="40dp"
+                android:background="@drawable/add" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:text="Agregar notas"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+
+
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="Materia"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:text="Nota"
+                        android:layout_marginBottom="40dp"
+                        />
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:text="Materia"
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:text="Nota"
+                        android:layout_marginBottom="40dp"
+                        />
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:text="Materia"
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:text="Nota"
+                        android:layout_marginBottom="40dp"
+                        />
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:text="Materia"
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:text="Nota"
+                        android:layout_marginBottom="40dp"
+                        />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:text="Materia"
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:text="Nota"
+                        android:layout_marginBottom="40dp"
+                        />
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:text="Materia"
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:text="Nota"
+                        android:layout_marginBottom="40dp"
+                        />
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:text="Materia"
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:text="Nota"
+                        android:layout_marginBottom="40dp"
+                        />
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:text="Materia"
+                        android:textSize="20dp"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="30dp"
+                        android:text="Nota"
+                        android:layout_marginBottom="40dp"
+                        />
+
+
+
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+
+
+
+
+        />
+
+
+    </LinearLayout>
+
+
+
+
 </android.support.constraint.ConstraintLayout>

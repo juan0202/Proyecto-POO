@@ -42,32 +42,25 @@ public class Calculo extends AppCompatActivity {
     double no6;
     double po6;
 
-    String n1 = "0";
-    String p1 = "0";
-    String n2 = "0";
-    String p2 = "0";
-    String n3 = "0";
-    String p3 = "0";
-    String n4 = "0";
-    String p4 = "0";
-    String n5 = "0";
-    String p5 = "0";
-    String n6 = "0";
-    String p6 = "0";
+    String n1;
+    String p1;
+    String n2;
+    String p2;
+    String n3;
+    String p3;
+    String n4;
+    String p4;
+    String n5;
+    String p5;
+    String n6;
+    String p6;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculo);
-
-
-
-
-
-
-
-
-
 
         not1 = (EditText) findViewById(R.id.nota1);
         not2 = (EditText) findViewById(R.id.nota2);
@@ -88,49 +81,80 @@ public class Calculo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                Cadenas p1 = new Cadenas("");
+            if(not1.getText().equals("") && not2.getText().equals("")&& not3.getText().equals("")
+                    && not4.getText().equals("") && not5.getText().equals("") && not6.getText().equals("")
+                    && por1.getText().equals("") && por2.getText().equals("")&& por3.getText().equals("")
+                    && por4.getText().equals("")&& por5.getText().equals("")&& por6.getText().equals("")){
+                Toast.makeText(getApplicationContext(),"Ingrese todos los valores requeridos por favor",Toast.LENGTH_LONG).show();
 
-                double retorno = Calcular(no1,no2,no3,no4,no5,po1,po2,po3,po4,po5,po6);
+
+            }else{
+                double retorno = Calcular();
 
 
-                if(retorno > 5.0){
 
-                    resp.setText("Nooo mijo, ni pidiéndole a lord Uribe que le ayude con las esferas del dragon");
-                }else if(retorno == 5.0){
-                    resp.setText("nota:"+retorno);
-                    resp.setText("No mijooo, eso está jodido. Ni juntando las esferas del drágon");
-                }else if((retorno < 5.0)&&(retorno <= 4.5)){
-                    resp.setText("nota:"+retorno);
-                    // resp.setText("Jmm pana, la cosa está grave pero aún se puede");
-                }else if((retorno < 4.5)&&(retorno >= 4.0 )){
-                    resp.setText("nota:"+retorno);
-                    resp.setText("Está difícil, pero aún se puede");
-                }else if((retorno < 4.5)&&(retorno >= 4.0 )){
-                    resp.setText("nota:"+retorno);
-                    resp.setText("Está difícil, pero aún se puede");
-                }else if((retorno < 4.0)&&(retorno >= 3.0 )){
-                    resp.setText("nota:"+retorno);
-                    resp.setText("¡Lúchela, no cancele!");
-                }else if((retorno < 3.0)&&(retorno >= 2.0 )){
-                    resp.setText("nota:"+retorno);
-                    resp.setText("Uff no quiero decir que está fácil, pero tienes bastantes opciones de lograrlo");
-                }else if((retorno < 2.0)&&(retorno >= 1.0 )){
-                    resp.setText("nota:"+retorno);
-                    resp.setText("Vas muy bien, sigue así");
-                }else if((retorno < 1.0)&&(retorno > 0.0 )){
-                    resp.setText("nota:"+retorno);
-                    resp.setText("Ah eso está prácticamente hecho, pero no se confíe");
-                }else if(retorno <= 0.0){
-                    resp.setText("nota:"+retorno);
-                    resp.setText("¡Ya coronaste!");
-                }else{
-                    resp.setText("nota:"+retorno);
-                    resp.setText("NADITA");
+                    if(retorno > 5.0){
+
+                        resp.setText("nota:"+retorno);
+                        resp.setText("Nooo mijo, ni pidiéndole a lord Uribe que le ayude con las esferas del dragon");
+                    }else if(retorno == 5.0){
+                        resp.setText("nota:"+retorno);
+                        resp.setText(p1.getCadena1());
+
+                    }else if((retorno < 5.0)&&(retorno <= 4.5)){
+                        resp.setText("nota:"+retorno);
+                        resp.setText("Jmm pana, la cosa está grave pero aún se puede");
+                    }else if((retorno < 4.5)&&(retorno >= 4.0 )){
+                        resp.setText("nota:"+retorno);
+                        resp.setText("Está difícil, pero aún se puede");
+                    }else if((retorno < 4.5)&&(retorno >= 4.0 )){
+                        resp.setText("nota:"+retorno);
+                        resp.setText("Está difícil, pero aún se puede");
+                    }else if((retorno < 4.0)&&(retorno >= 3.0 )){
+                        resp.setText("nota:"+retorno);
+                        resp.setText("¡Lúchela, no cancele!");
+                    }else if((retorno < 3.0)&&(retorno >= 2.0 )){
+                        resp.setText("nota:"+retorno);
+                        resp.setText("Uff no quiero decir que está fácil, pero tienes bastantes opciones de lograrlo");
+                    }else if((retorno < 2.0)&&(retorno >= 1.0 )){
+                        resp.setText("nota:"+retorno);
+                        resp.setText("Vas muy bien, sigue así");
+                    }else if((retorno < 1.0)&&(retorno > 0.0 )){
+                        resp.setText("nota:"+retorno);
+                        resp.setText("Ah eso está prácticamente hecho, pero no se confíe");
+                    }else if(retorno <= 0.0){
+                        if(retorno == 0.0){
+                            resp.setText("nota:"+retorno);
+
+                        }
+                        resp.setText("¡Ya coronaste!");
+                    }else{
+                        resp.setText("nota:"+retorno);
+                        resp.setText("NADITA");
+                    }
+
                 }
+
+
             }
+
+
         });
 
 
+
+
+
+    }
+
+    public double Calcular ()
+    {
+
+
         try{
+
+
             n1 = not1.getText().toString();
             no1 = Double.parseDouble(n1);
             n2 = not2.getText().toString();
@@ -155,29 +179,20 @@ public class Calculo extends AppCompatActivity {
             po5 = Double.parseDouble(p5);
             p6 = por6.getText().toString();
             po6 = Double.parseDouble(p6);
-            double
-                    retorno = Calcular(no1,no2,no3,no4,no5,po1,po2,po3,po4,po5,po6);
-
-
-
-
 
 
 
         }catch(NumberFormatException e){
-            System.out.println("valor ingresado incorrectamente");
+            Toast.makeText(getApplicationContext(),"Error en el numero ingresado",Toast.LENGTH_SHORT).show();
         }
 
 
-    }
+            double notanecesaria;
+            double notamin = 3.0;
+            notanecesaria = (notamin - no1*po1 - no2*po2 - no3*po3 - no4*po4 -no5*po5  )/(1-(po1 + po2 + po3 + po4 + po5));
+            return  notanecesaria;
 
-    public double Calcular (double no1, double no2, double no3, double no4,double no5,double po1, double po2,double po3,
-                            double po4, double po5,double po6)
-    {
-        double notanecesaria;
-        double notamin = 3.0;
-        notanecesaria = (notamin - no1*po1 - no2*po2 - no3*po3 - no4*po4 -no5*po5  )/(1-(po1 + po2 + po3 + po4 + po5));
-        return  notanecesaria;
+
 
     }
 

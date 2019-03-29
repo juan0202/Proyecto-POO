@@ -16,6 +16,7 @@
 
 
         <EditText
+            android:id="@+id/edit1"
             android:layout_marginTop="10dp"
             android:layout_width="300dp"
             android:layout_height="50dp"
@@ -24,6 +25,7 @@
             />
 
         <EditText
+            android:id="@+id/edit2"
             android:layout_marginTop="10dp"
             android:layout_width="300dp"
             android:layout_height="60dp"
@@ -33,12 +35,32 @@
             />
 
         <EditText
+            android:id="@+id/edit3"
             android:layout_marginTop="10dp"
             android:layout_width="300dp"
             android:layout_height="60dp"
             android:layout_marginLeft="50dp"
             android:hint="Fecha entrega"
             />
+
+        <Button
+            android:id="@+id/botonadd"
+            android:layout_marginTop="20dp"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="110dp"
+            android:textSize="20dp"
+            android:text="AGREGAR NOTA"/>
+
+
+
+            <ListView
+                android:id="@+id/listica"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+
+
 
 
 

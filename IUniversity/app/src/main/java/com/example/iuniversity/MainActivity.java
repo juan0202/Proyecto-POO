@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            /*
+
                 try{
 
 
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                     if(cursor.getCount() > 0){
-
+                        PasarActivityPrin();
 
 
                     }else{
@@ -58,9 +58,9 @@ public class MainActivity extends AppCompatActivity {
                 }catch (SQLException e){
                     e.printStackTrace();
                 }
-                */
 
-                PasarActivityPrin();
+
+
 
             }
         });

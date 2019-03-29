@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 public class SQLite_OpenHelper extends SQLiteOpenHelper {
 
@@ -38,6 +39,7 @@ public class SQLite_OpenHelper extends SQLiteOpenHelper {
 
     //Metodo que permite insertar registros en la tabla
     public void insertarReg(String nom, String correo, String contrasena,String usuario){
+
         ContentValues valores = new ContentValues();
         valores.put("Nombre",nom);
         valores.put("Correo",correo);
@@ -52,6 +54,7 @@ public class SQLite_OpenHelper extends SQLiteOpenHelper {
                 "Nombre","Correo","Contrasena","Usuario"},
                 "Correo like '"+usu+"' " +
                         "and Contrasena like '"+pass+"'",null,null,null,null);
+        Log.d("cursor",""+mcursor.getCount());
         return mcursor;
 
     }
