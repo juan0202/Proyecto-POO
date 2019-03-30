@@ -34,7 +34,7 @@ public class Menu extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                pasarAsignaturas();
             }
         });
 
@@ -60,6 +60,14 @@ public class Menu extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    public  void pasarAsignaturas(){
+
+        Intent intent = new Intent(this,Asignaturas.class);
+        startActivity(intent);
+
+    }
+
 
     public  void pasarCalculo(){
 

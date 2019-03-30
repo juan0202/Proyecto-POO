@@ -50,4 +50,10 @@ public class AdaptadorDB extends SQLite_OpenHelper {
         return c;
     }
 
+    public Cursor getNotes(){
+        String columnas[]={TABLE_ID,TITLE,CONTENT};
+        Cursor c = this.getReadableDatabase().query(TABLE, columnas,null,null,null,null,null);
+        return c;
+    }
+
 }

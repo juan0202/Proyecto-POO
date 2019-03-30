@@ -10,15 +10,21 @@ import android.util.Log;
 
 public class SQLite_OpenHelper extends SQLiteOpenHelper {
 
+    public static final String TABLE_ID = "idNote";
+    public static final String USU= "usu";
+    private static final String PASS = "pass";
+    private static final String DATABASE = "Notas";
+    private static  final String TABLE = "usuarios";
+
     public SQLite_OpenHelper(Context context,  String name,  SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String query = "create table  usuarios(_ID integer primary key autoincrement, "
-                + "Nombre text, Correo text, Contrasena text, Usuario text);"; //Query para hacer invocaciones SQL
-         db.execSQL(query);
+        db.execSQL("CREATE TABLE "+ TABLE +" (" +
+                TABLE_ID +" INTEGER PRIMARY KEY AUTOINCREMENT, "+
+                USU +" TEXT,"+ PASS +" TEXT)");
     }
 
     @Override
@@ -41,8 +47,8 @@ public class SQLite_OpenHelper extends SQLiteOpenHelper {
     public void insertarReg(String nom, String correo, String contrasena,String usuario){
 
         ContentValues valores = new ContentValues();
-        valores.put("Nombre",nom);
-        valores.put("Correo",correo);
+       // valores.put("Nombre",nom);
+        //valores.put("Correo",correo);
         valores.put("Contrasena", contrasena);
         valores.put("Usuario",usuario);
         this.getWritableDatabase().insert("usuarios",null,valores);
@@ -52,7 +58,7 @@ public class SQLite_OpenHelper extends SQLiteOpenHelper {
         Cursor mcursor = null;
         mcursor = this.getReadableDatabase().query("usuarios",new String[]{"_ID",
                 "Nombre","Correo","Contrasena","Usuario"},
-                "Correo like '"+usu+"' " +
+                "Usuario like '"+usu+"' " +
                         "and Contrasena like '"+pass+"'",null,null,null,null);
         Log.d("cursor",""+mcursor.getCount());
         return mcursor;

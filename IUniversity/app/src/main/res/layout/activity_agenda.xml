@@ -34,14 +34,6 @@
             android:hint="Materia"
             />
 
-        <EditText
-            android:id="@+id/edit3"
-            android:layout_marginTop="10dp"
-            android:layout_width="300dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="50dp"
-            android:hint="Fecha entrega"
-            />
 
         <Button
             android:id="@+id/botonadd"
@@ -52,6 +44,14 @@
             android:layout_marginLeft="110dp"
             android:textSize="20dp"
             android:text="AGREGAR NOTA"/>
+
+        <TextView
+            android:id="@+id/textolista"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="120dp"
+            android:textSize="20dp"
+            android:text="Lista de notas"/>
 
 
 

@@ -42,7 +42,13 @@ public class MainActivity extends AppCompatActivity {
                     Cursor cursor = helper.ConsultarUsuPas
                             (txtusu.getText().toString(),txtpass.getText().toString());
 
+                if(txtusu.equals("")){
+                    Toast.makeText(getApplicationContext(),"Llene todos los campos",Toast.LENGTH_LONG).show();
+                    if (txtpass.equals("")) {
+                        Toast.makeText(getApplicationContext(),"Llene todos los campos",Toast.LENGTH_LONG).show();
 
+                    }
+                }else{
                     if(cursor.getCount() > 0){
                         PasarActivityPrin();
 
@@ -50,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
                     }else{
                         Toast.makeText(getApplicationContext(),"Usuario y/o pass incorrectos",Toast.LENGTH_LONG).show();
                     }
+                }
+
                     txtusu.setText("");
                     txtpass.setText("");
                     txtusu.findFocus();

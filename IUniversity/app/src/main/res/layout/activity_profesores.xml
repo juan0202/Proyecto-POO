@@ -15,6 +15,7 @@
 
 
         <EditText
+            android:id="@+id/campo1"
             android:layout_marginTop="10dp"
             android:layout_width="300dp"
             android:layout_height="50dp"
@@ -23,6 +24,7 @@
             />
 
         <EditText
+            android:id="@+id/campo2"
             android:layout_marginTop="10dp"
             android:layout_width="300dp"
             android:layout_height="60dp"
@@ -32,6 +34,7 @@
             />
 
         <EditText
+            android:id="@+id/campo3"
             android:layout_marginTop="10dp"
             android:layout_width="300dp"
             android:layout_height="60dp"
@@ -39,11 +42,20 @@
             android:hint="Teléfono"
             />
 
-        <SearchView
-            android:layout_marginTop="10dp"
+        <Button
+            android:id="@+id/agregar"
+            android:layout_marginTop="20dp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="110dp"
+            android:text="AGREGAR"/>
+
+        <ListView
+            android:id="@+id/listap"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_marginBottom="10dp"></SearchView>
+            android:layout_height="match_parent"></ListView>
+
 
     </LinearLayout>
 
